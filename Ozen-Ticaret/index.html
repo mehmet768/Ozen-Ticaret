@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozen Alışveriş | E-Ticaret</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap İkonlar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+    <!-- Üst Bildirim -->
+    <div class="bg-primary text-white py-2 text-center">
+        <p class="mb-0 small">🎉 İlk alışverişinize özel %20 İNDİRİM! KOD: PREMİ20 — Ücretsiz Kargo ve 7/24 Destek</p>
+    </div>
+
+    <!-- Navigasyon -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" alt="" width="170" height="80"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto gap-2">
+                    <li class="nav-item"><a class="nav-link active" href="#anasayfa">Ana Sayfa</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Kategoriler</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Elektronik</a></li>
+                            <li><a class="dropdown-item" href="#">Moda</a></li>
+                            <li><a class="dropdown-item" href="#">Ev & Yaşam</a></li>
+                            <li><a class="dropdown-item" href="#">Spor</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#urunler">Ürünler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hakkimizda">Hakkımızda</a></li>
+                     <li class="nav-item"><a class="nav-link" href="#sss">S.S.S</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#iletisim">İletişim</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-3">
+                    <button class="theme-toggle" id="themeToggle" title="Tema Değiştir">
+                        <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                    </button>
+                    <a href="#" class="nav-link position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="bi bi-bag-fill fs-5"></i>
+                        <span class="badge rounded-pill bg-danger cart-badge" id="cartCount">3</span>
+                    </a>
+                    <a href="#" class="nav-link"><i class="bi bi-person-circle fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- === Slider Bölümü === -->
+    <section class="hero-slider" id="anasayfa">
+        <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <!-- Göstergeler -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- Slider İçeriği -->
+            <div class="carousel-inner">
+                <!-- Slider 1 -->
+                <div class="carousel-item active carousel-bg-1">
+                    <div class="carousel-caption-custom">
+                        <img src="images/slider1.png" alt="">
+
+                    </div>
+                </div>
+
+                <!-- Slider 2 -->
+                <div class="carousel-item carousel-bg-2">
+                    <div class="carousel-caption-custom">
+                        <img src="images/slider2.png" alt="">
+
+                    </div>
+                </div>
+
+                <!-- Slider 3 -->
+                <div class="carousel-item carousel-bg-3">
+                    <div class="carousel-caption-custom">
+                        <img src="images/slider3.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oklar -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Önceki</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Sonraki</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- özellikler -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6 text-center">
+                    <div class="feature-icon mx-auto"><i class="bi bi-truck"></i></div>
+                    <h6 class="fw-bold">Ücretsiz Kargo</h6>
+                    <p class="small text-muted">500₺+ alışverişte</p>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center">
+                    <div class="feature-icon mx-auto"><i class="bi bi-shield-check"></i></div>
+                    <h6 class="fw-bold">Güvenli Ödeme</h6>
+                    <p class="small text-muted">256-bit SSL Şifreleme</p>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center">
+                    <div class="feature-icon mx-auto"><i class="bi bi-arrow-counterclockwise"></i></div>
+                    <h6 class="fw-bold">Kolay İade</h6>
+                    <p class="small text-muted">14 gün içinde koşulsuz</p>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center">
+                    <div class="feature-icon mx-auto"><i class="bi bi-headset"></i></div>
+                    <h6 class="fw-bold">7/24 Destek</h6>
+                    <p class="small text-muted">Her zaman yanınızdayız</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Öne çıkan ürünler -->
+    <section class="py-5" id="urunler">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Öne Çıkan Ürünler</h2>
+            </div>
+
+            <div class="row g-4">
+                <!-- Ürün 1 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="images/galeri1.png" class="w-100" alt="Ürün">
+                            <span class="badge rounded-pill badge-discount">-25%</span>
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-semibold fs-6">Akıllı Kablosuz Kulaklık</h5>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="product-price">1.499 ₺</span>
+                                <span class="product-old-price">1.999 ₺</span>
+                            </div>
+                            <div class="d-flex text-warning mb-3 small">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                <span class="ms-2 text-muted">4.8</span>
+                            </div>
+                            <button class="btn btn-primary w-100 add-to-cart">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ürün 2 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="images/galeri2.png" class="w-100" alt="Ürün">
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-semibold fs-6">Modern Tasarım Saat</h5>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="product-price">2.799 ₺</span>
+                            </div>
+                            <div class="d-flex text-warning mb-3 small">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                <span class="ms-2 text-muted">5.0</span>
+                            </div>
+                            <button class="btn btn-primary w-100 add-to-cart">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ürün 3 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="images/galeri3.png" class="w-100" alt="Ürün">
+                            <span class="badge rounded-pill bg-success position-absolute top-0 start-0 m-3">Yeni</span>
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-semibold fs-6">Minimalist Sırt Çantası</h5>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="product-price">899 ₺</span>
+                                <span class="product-old-price">1.200 ₺</span>
+                            </div>
+                            <div class="d-flex text-warning mb-3 small">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                                <span class="ms-2 text-muted">4.2</span>
+                            </div>
+                            <button class="btn btn-primary w-100 add-to-cart">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ürün 4 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="images/galeri4.png" class="w-100" alt="Ürün">
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-semibold fs-6">Su Geçirmez Spor Ayakkabı</h5>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="product-price">1.850 ₺</span>
+                            </div>
+                            <div class="d-flex text-warning mb-3 small">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i><i class="bi bi-star"></i>
+                                <span class="ms-2 text-muted">3.7</span>
+                            </div>
+                            <button class="btn btn-primary w-100 add-to-cart">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row g-4 mt-4">
+                <!-- Ürün 5 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="images/galeri8.png" class="w-100" alt="Ürün">
+                            <span class="badge rounded-pill badge-discount">-25%</span>
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-semibold fs-6">Akıllı Kablosuz Kulaklık</h5>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="product-price">1.499 ₺</span>
+                                <span class="product-old-price">1.999 ₺</span>
+                            </div>
+                            <div class="d-flex text-warning mb-3 small">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                <span class="ms-2 text-muted">4.8</span>
+                            </div>
+                            <button class="btn btn-primary w-100 add-to-cart">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ürün 6 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="images/galeri7.png" class="w-100" alt="Ürün">
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-semibold fs-6">Modern Tasarım Saat</h5>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="product-price">2.799 ₺</span>
+                            </div>
+                            <div class="d-flex text-warning mb-3 small">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                <span class="ms-2 text-muted">5.0</span>
+                            </div>
+                            <button class="btn btn-primary w-100 add-to-cart">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ürün 7 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="images/galeri6.png" class="w-100" alt="Ürün">
+                            <span class="badge rounded-pill bg-success position-absolute top-0 start-0 m-3">Yeni</span>
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-semibold fs-6">Minimalist Cüzdan</h5>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="product-price">899 ₺</span>
+                                <span class="product-old-price">1.200 ₺</span>
+                            </div>
+                            <div class="d-flex text-warning mb-3 small">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                                <span class="ms-2 text-muted">4.2</span>
+                            </div>
+                            <button class="btn btn-primary w-100 add-to-cart">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ürün 8 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="images/galeri5.png" class="w-100" alt="Ürün">
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-semibold fs-6">Su Geçirmez Spor Ayakkabı</h5>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="product-price">1.850 ₺</span>
+                            </div>
+                            <div class="d-flex text-warning mb-3 small">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i><i class="bi bi-star"></i>
+                                <span class="ms-2 text-muted">3.7</span>
+                            </div>
+                            <button class="btn btn-primary w-100 add-to-cart">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-outline-primary btn-lg">Tüm Ürünleri Gör <i
+                        class="bi bi-chevron-right ms-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımızda -->
+    <section class="py-5 bg-light-subtle" id="hakkimizda">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6">
+                    <img src="images/hakkimizda.png" alt="Hakkımızda" class="rounded-4 shadow-lg img-fluid" width="100%"
+                        height="100%">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-4">Neden Bizi Tercih Etmelisiniz?</h2>
+                    <p class="mb-3">2015'ten beri Türkiye'de e-ticaretin öncülerindeniz. Müşteri memnuniyeti odaklı
+                        çalışıyor, orijinal ürün garantisi sunuyoruz.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Orijinal Ürün
+                            Garantisi</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Hızlı Aynı Gün Kargo
+                        </li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Kapıda Ödeme Seçeneği
+                        </li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Güvenli Alışveriş
+                        </li>
+                    </ul>
+                    <a href="#iletisim" class="btn btn-primary">Bize Ulaşın</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sayaç Bölümü-->
+    <section class="counter-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter-card">
+                        <div class="counter-icon"><i class="bi bi-emoji-smile-fill"></i></div>
+                        <div class="counter-number" data-target="25000">0</div>
+                        <p class="counter-label">Mutlu Müşteri</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter-card">
+                        <div class="counter-icon"><i class="bi bi-bag-check-fill"></i></div>
+                        <div class="counter-number" data-target="1250">0</div>
+                        <p class="counter-label">Ürün Çeşidi</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter-card">
+                        <div class="counter-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <div class="counter-number" data-target="81">0</div>
+                        <p class="counter-label">Şehirde Teslimat</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter-card">
+                        <div class="counter-icon"><i class="bi bi-calendar-check-fill"></i></div>
+                        <div class="counter-number" data-target="9">0</div>
+                        <p class="counter-label">Yıllık Deneyim</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sıkça Sorulan Sorular -->
+    <section class="faq-section" id="sss">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+                <p class="text-muted mb-5">En çok merak edilen soruların cevaplarını aşağıda bulabilirsiniz</p>
+            </div>
+
+            <!-- Kategori Sekmeleri -->
+            <div class="faq-tabs">
+                <div class="faq-tab active" data-category="genel">Genel</div>
+                <div class="faq-tab" data-category="odeme">Ödeme</div>
+                <div class="faq-tab" data-category="kargo">Kargo & Teslimat</div>
+                <div class="faq-tab" data-category="iade">İade & Değişim</div>
+            </div>
+
+            <!-- Genel Sorular -->
+            <div class="faq-content active" id="genel">
+                <div class="accordion" id="accordionGenel">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#g1">
+                                <i class="bi bi-question-circle faq-icon"></i> OzenShop nedir?
+                            </button>
+                        </h2>
+                        <div id="g1" class="accordion-collapse collapse" data-bs-parent="#accordionGenel">
+                            <div class="accordion-body">
+                                OzenShop, Türkiye'de güvenilir ve kaliteli alışverişin yeni adresidir. 2015'ten bu
+                                yana binlerce mutlu müşteriye orijinal ürünleri en uygun fiyatlarla sunuyoruz.
+                                Elektronikten modaya, ev yaşamından spor ürünlerine kadar geniş ürün yelpazemizle
+                                hizmetinizdeyiz.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#g2">
+                                <i class="bi bi-shield-check faq-icon"></i> Ürünler orijinal mi?
+                            </button>
+                        </h2>
+                        <div id="g2" class="accordion-collapse collapse" data-bs-parent="#accordionGenel">
+                            <div class="accordion-body">
+                                Evet, OzenShop olarak sattığımız tüm ürünler %100 orijinal ve garantilidir. Tüm
+                                ürünlerimiz üretici firma tarafından garantilidir ve faturasıyla birlikte teslim edilir.
+                                Sahte veya taklit ürün kesinlikle satılmaz.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#g3">
+                                <i class="bi bi-person-plus faq-icon"></i> Nasıl üye olabilirim?
+                            </button>
+                        </h2>
+                        <div id="g3" class="accordion-collapse collapse" data-bs-parent="#accordionGenel">
+                            <div class="accordion-body">
+                                Sağ üst köşedeki "Üye Ol" butonuna tıklayarak ad, soyad, e-posta ve şifre bilgilerinizle
+                                üyeliğinizi oluşturabilirsiniz. Üyelik tamamen ücretsizdir ve kampanyalardan öncelikli
+                                haberdar olmanızı sağlar.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ödeme Soruları -->
+            <div class="faq-content" id="odeme">
+                <div class="accordion" id="accordionOdeme">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#o1">
+                                <i class="bi bi-credit-card faq-icon"></i> Hangi ödeme yöntemleri mevcut?
+                            </button>
+                        </h2>
+                        <div id="o1" class="accordion-collapse collapse" data-bs-parent="#accordionOdeme">
+                            <div class="accordion-body">
+                                Kredi kartı, banka kartı, havale/EFT, kapıda ödeme ve seçili ilçe ve illerde
+                                Yemeksepeti/Garantipay ile ödeme seçeneklerimiz bulunmaktadır. Kredi kartlarına taksit
+                                imkanı da sunuyoruz.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#o2">
+                                <i class="bi bi-lock faq-icon"></i> Ödemem güvenli mi?
+                            </button>
+                        </h2>
+                        <div id="o2" class="accordion-collapse collapse" data-bs-parent="#accordionOdeme">
+                            <div class="accordion-body">
+                                Evet, sitemiz 256-bit SSL şifreleme ile korunmaktadır. Kart bilgileriniz hiçbir şekilde
+                                tarafımızca görüntülenmez veya kaydedilmez. Ödeme işlemleri doğrudan banka altyapısı
+                                üzerinden gerçekleştirilir.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#o3">
+                                <i class="bi bi-percent faq-icon"></i> Taksit imkanı var mı?
+                            </button>
+                        </h2>
+                        <div id="o3" class="accordion-collapse collapse" data-bs-parent="#accordionOdeme">
+                            <div class="accordion-body">
+                                Evet, anlaşmalı bankaların kredi kartlarıyla 2, 3, 6, 9 ve 12 aya varan taksit
+                                imkanından faydalanabilirsiniz. Taksit seçenekleri ödeme sayfasında otomatik olarak
+                                görüntülenecektir.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kargo Soruları -->
+            <div class="faq-content" id="kargo">
+                <div class="accordion" id="accordionKargo">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#k1">
+                                <i class="bi bi-truck faq-icon"></i> Kargo ücreti ne kadar?
+                            </button>
+                        </h2>
+                        <div id="k1" class="accordion-collapse collapse" data-bs-parent="#accordionKargo">
+                            <div class="accordion-body">
+                                500₺ ve üzeri alışverişlerinizde kargo tamamen ücretsizdir. Daha düşük tutarlı
+                                siparişler için kargo ücreti 49₺'dir. Kapıda ödeme seçeneğinde ayrıca 29₺ hizmet ücreti
+                                uygulanır.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#k2">
+                                <i class="bi bi-clock faq-icon"></i> Teslimat süresi ne kadar?
+                            </button>
+                        </h2>
+                        <div id="k2" class="accordion-collapse collapse" data-bs-parent="#accordionKargo">
+                            <div class="accordion-body">
+                                Stoktaki ürünler için siparişiniz aynı gün kargoya verilir. Teslimat süresi bulunduğunuz
+                                ile göre değişmekle birlikte genellikle 1-3 iş günü arasındadır. Şehir merkezleri
+                                genellikle 1-2 gün, kırsal bölgeler 2-4 iş günü sürmektedir.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#k3">
+                                <i class="bi bi-geo-alt faq-icon"></i> Hangi illere teslimat yapıyorsunuz?
+                            </button>
+                        </h2>
+                        <div id="k3" class="accordion-collapse collapse" data-bs-parent="#accordionKargo">
+                            <div class="accordion-body">
+                                Türkiye'nin 81 iline teslimat yapıyoruz. Kargo firması anlaşmamız sayesinde en uzak
+                                noktalara bile güvenle gönderim yapılmaktadır.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- İade & Değişim -->
+            <div class="faq-content" id="iade">
+                <div class="accordion" id="accordionIade">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#i1">
+                                <i class="bi bi-arrow-counterclockwise faq-icon"></i> İade süresi ne kadar?
+                            </button>
+                        </h2>
+                        <div id="i1" class="accordion-collapse collapse" data-bs-parent="#accordionIade">
+                            <div class="accordion-body">
+                                Siparişi teslim aldığınız tarihten itibaren 14 gün içinde koşulsuz iade hakkınız
+                                bulunmaktadır. Ürünün kullanılmamış, ambalajının zarar görmemiş olması yeterlidir.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#i2">
+                                <i class="bi bi-box-seam faq-icon"></i> İade nasıl yapılır?
+                            </button>
+                        </h2>
+                        <div id="i2" class="accordion-collapse collapse" data-bs-parent="#accordionIade">
+                            <div class="accordion-body">
+                                Hesabım > Siparişlerim bölümünden iade etmek istediğiniz siparişi seçip "İade Talebi
+                                Oluştur" adımlarını izleyin. Onay sonrası size en yakın kargo şubesine ücretsiz gönderim
+                                kodu verilecektir. İade ücreti tarafımıza aittir.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#i3">
+                                <i class="bi bi-cash-coin faq-icon"></i> İade tutarı ne zaman hesaplanır?
+                            </button>
+                        </h2>
+                        <div id="i3" class="accordion-collapse collapse" data-bs-parent="#accordionIade">
+                            <div class="accordion-body">
+                                Ürün depomuza ulaştıktan sonra kontrol edilir ve iade işlemi onaylanır. Kredi kartına
+                                geri ödeme süresi bankanıza göre 3-7 iş günü sürebilir. Havale ile ödemelerde ise aynı
+                                gün transfer yapılır.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="text-muted">Sorunuzun cevabını bulamadınız mı?</p>
+                <a href="#iletisim" class="btn btn-primary">Bize Ulaşın <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- İletişim -->
+    <section class="py-5" id="iletisim">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Bize Ulaşın</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h5 class="fw-bold mb-3">İletişim Bilgileri</h5>
+                    <p class="mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Kocaeli, Türkiye</p>
+                    <p class="mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i> +90 555 000 00 00</p>
+                    <p class="mb-4"><i class="bi bi-envelope-fill text-primary me-2"></i> info@ozenshop.com</p>
+                    <div class="d-flex gap-3 fs-4">
+                        <a href="#" class="text-primary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-primary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-primary"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-primary"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <form class="p-4 border rounded-4 shadow-sm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">Adınız</label>
+                                <input type="text" class="form-control" placeholder="Adınız" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">Soyadınız</label>
+                                <input type="text" class="form-control" placeholder="Soyadınız" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-medium">E-posta</label>
+                                <input type="email" class="form-control" placeholder="ornek@mail.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-medium">Mesajınız</label>
+                                <textarea class="form-control" rows="4" placeholder="Mesajınızı yazın..."
+                                    required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-100">Gönder</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <img src="images/logo.png" alt="" width="170" height="80">
+                    <p class="text-muted">Kalite, güven ve uygun fiyatın tek adresi. Alışverişin yeni adı.</p>
+                    <div class="d-flex gap-2 fs-5 mt-3">
+                        <a href="#" class="text-muted"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Hızlı Menü</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#anasayfa" class="text-muted text-decoration-none">Ana Sayfa</a></li>
+                        <li><a href="#urunler" class="text-muted text-decoration-none">Ürünler</a></li>
+                        <li><a href="#hakkimizda" class="text-muted text-decoration-none">Hakkımızda</a></li>
+                        <li><a href="#iletisim" class="text-muted text-decoration-none">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Müşteri Hizmetleri</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">Sıkça Sorulan Sorular</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Kargo & Teslimat</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">İade & Değişim</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Gizlilik Politikası</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Ödeme Yöntemleri</h6>
+                    <div class="d-flex gap-2 fs-3">
+                        <i class="bi bi-credit-card text-muted"></i>
+                        <i class="bi bi-wallet2 text-muted"></i>
+                        <i class="bi bi-cash-coin text-muted"></i>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center text-muted small">
+                <p>&copy; 2026 Tüm hakları saklıdır. | Mehmet Özen</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sepet Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-bottom">
+                    <h5 class="modal-title fw-bold" id="cartModalLabel">Sepetim <span class="badge bg-primary ms-2">3
+                            Ürün</span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Sepet Ürünü 1 -->
+                    <div class="cart-item d-flex align-items-center gap-3">
+                        <img src="images/galeri1.png" width="80" height="80" class="rounded object-fit-cover" alt="">
+                        <div class="flex-grow-1">
+                            <h6 class="fw-semibold mb-1">Akıllı Kablosuz Kulaklık</h6>
+                            <p class="text-primary fw-bold mb-0">1.499 ₺</p>
+                        </div>
+                        <div class="d-flex align-items-center quantity-input">
+                            <button class="btn btn-sm btn-outline-secondary">-</button>
+                            <input type="number" value="1" class="form-control form-control-sm text-center mx-1"
+                                min="1">
+                            <button class="btn btn-sm btn-outline-secondary">+</button>
+                        </div>
+                        <button class="btn btn-sm text-danger"><i class="bi bi-trash"></i></button>
+                    </div>
+                    <!-- Sepet Ürünü 2 -->
+                    <div class="cart-item d-flex align-items-center gap-3">
+                        <img src="images/galeri2.png" width="80" height="80" class="rounded object-fit-cover" alt="">
+                        <div class="flex-grow-1">
+                            <h6 class="fw-semibold mb-1">Modern Tasarım Saat</h6>
+                            <p class="text-primary fw-bold mb-0">2.799 ₺</p>
+                        </div>
+                        <div class="d-flex align-items-center quantity-input">
+                            <button class="btn btn-sm btn-outline-secondary">-</button>
+                            <input type="number" value="1" class="form-control form-control-sm text-center mx-1"
+                                min="1">
+                            <button class="btn btn-sm btn-outline-secondary">+</button>
+                        </div>
+                    </div>
+                    <!-- Sepet Ürünü 3 -->
+                    <div class="cart-item d-flex align-items-center gap-3">
+                        <img src="images/galeri3.png" width="80" height="80" class="rounded object-fit-cover" alt="">
+                        <div class="flex-grow-1">
+                            <h6 class="fw-semibold mb-1">Minimalist Sırt Çantası</h6>
+                            <p class="text-primary fw-bold mb-0">899 ₺</p>
+                        </div>
+                        <div class="d-flex align-items-center quantity-input">
+                            <button class="btn btn-sm btn-outline-secondary">-</button>
+                            <input type="number" value="2" class="form-control form-control-sm text-center mx-1"
+                                min="1">
+                            <button class="btn btn-sm btn-outline-secondary">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-top d-block">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="fw-bold fs-5">Toplam: <span class="text-primary">6.096 ₺</span></span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-secondary flex-grow-1" data-bs-dismiss="modal">Alışverişe
+                            Devam Et</button>
+                        <a href="#" class="btn btn-primary flex-grow-1">Ödemeye Geç <i
+                                class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
